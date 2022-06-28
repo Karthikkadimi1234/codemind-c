@@ -1,18 +1,19 @@
 #include<stdio.h>
 int main()
 {
-    int r,c,a[100][100],i,j,s=0,t=0;
-    scanf("%d %d",&r,&c);
-    for(i=1;i<=r;i++)
+    int n,m;
+    scanf("%d%d",&n,&m);
+    int a[n][m],i,j,s=0,so=0;
+    for(i=1;i<=n;i++)
     {
-        for(j=1;j<=c;j++)
+        for(j=1;j<=m;j++)
         {
             scanf("%d",&a[i][j]);
         }
     }
-    for(i=1;i<=r;i++)
+    for(i=1;i<=n;i++)
     {
-        for(j=1;j<=c;j++)
+        for(j=1;j<=m;j++)
         {
             if(a[i][j]%2==0)
             {
@@ -20,9 +21,9 @@ int main()
             }
             else
             {
-                t+=a[i][j];
+                so+=a[i][j];
             }
         }
     }
-    printf("%d %d",s,t);
+    printf("%d %d",s,so);
 }
